@@ -7,8 +7,6 @@ var uglify = require("gulp-uglify");
 var autoprefixer = require("gulp-autoprefixer");
 var pkg = require("./package.json");
 var browserSync = require("browser-sync").create();
-var mygulpplugin = require("mygulpplugin");
-gulp.tasks = mygulpplugin.tasks;
 
 // Set the banner content
 var banner = [
@@ -131,5 +129,3 @@ gulp.task("dev", ["css", "js", "browserSync"], function() {
   gulp.watch("./js/*.js", ["js"]);
   gulp.watch("./*.html", browserSync.reload);
 });
-
-module.exports = gulp;
